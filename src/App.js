@@ -22,3 +22,4 @@ export default App;
 // 자식노드에는 태그 여러개 해도 상관 없다.
 // import를 했으면 export deafault 를 해줘야 함 index에서 받아온 App 를 export!
 // class 가 아닌 className 으로 작성 카멜 표기법 사용
+// 새로 만든 컴포넌트(.js 하나하나를 의미함)를 재사용 가능함
