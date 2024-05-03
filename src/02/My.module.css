@@ -1,0 +1,6 @@
+.c1 {
+    color: yellow;
+    font-weight: bold;
+}
+
+/* 모듈 css는 컴포넌트에만 스타일 적용하기 위함 */
