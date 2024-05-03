@@ -1,11 +1,25 @@
 import './App.css';
-import MyClock from './02/MyClock';
-
+// import MyClock from './02/MyClock';
+import MyDiv from './03/MyDiv';
+import { IoHome } from "react-icons/io5";
+import cimg from './02/colock.png';
 
 function App() {
   return (
-    <div className="App">
-        <MyClock/>  
+    <div className="flex flex-col w-full max-w-screen-xl mx-auto h-screen overscroll-y-auto">
+      <header className='flex justify-between items-center text-xl font-bold h-20 p-10 bg-yellow-300'>
+        <p>header</p>
+        <p>k-digital</p>
+        <p><IoHome className='text-3xl text-blue-950'/></p>
+      </header>
+      <main className='grow'>
+        <div className='flex justify-center items-center'>
+          <img src={cimg} className='App-logo' alt="logo"/>
+        </div>
+      </main>
+      <footer className='flex justify-center items-center text-4xl font-bold text-white bg-slate-800 h-20'> 
+        footer
+      </footer>
     </div>
   );
 }
