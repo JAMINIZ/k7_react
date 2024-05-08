@@ -1,8 +1,9 @@
 import './App.css';
 // import MyClock from './02/MyClock';
-import MyDiv from './03/MyDiv';
+// import MyDiv from './03/MyDiv';
 import { IoHome } from "react-icons/io5";
-import cimg from './02/colock.png';
+import MyList from './04/MyList';
+
 
 function App() {
   return (
@@ -12,10 +13,12 @@ function App() {
         <p>k-digital</p>
         <p><IoHome className='text-3xl text-blue-950'/></p>
       </header>
-      <main className='grow'>
-        <div className='flex justify-center items-center'>
+      <main className='grow flex justify-center items-center'>
+        {/* <div className='flex justify-center items-center'>
           <img src={cimg} className='App-logo' alt="logo"/>
-        </div>
+        </div> */}
+        {/* <MyDiv /> */}
+        <MyList />
       </main>
       <footer className='flex justify-center items-center text-4xl font-bold text-white bg-slate-800 h-20'> 
         footer
@@ -25,9 +28,10 @@ function App() {
 }
 
 export default App;
+// react는 사용자 ui를 만드는 라이브러리
 // react는 자바스크립트를 짤 때 반드시 return 을 짠다 
-//＃ .js 파일에는 function 하나만 들어가게  
-//＃ function 이름은 반드시 대문자로 시작
+// ＃ .js 파일에는 function 하나만 들어가게  
+// ＃ function 이름은 반드시 대문자로 시작
 // return 에는 우리가 아는 태그를 쓴다. (js x문법이 적용됨)
 // ＃ 부모노드 (태그 하나만) return 한다  
 // 자식노드에는 태그 여러개 해도 상관 없다.
@@ -35,3 +39,7 @@ export default App;
 // class 가 아닌 className 으로 작성 카멜 표기법 사용
 // 새로 만든 컴포넌트(.js 하나하나를 의미함)를 재사용 가능함
 // 전역 스타일 시트로 쓰면 각각의 컴포넌트에 스타일 시트를 넣어도 전체로 스타일시트가 다 적용 된다.
+// # probs 값 전달
+// 원하는 시점에 화면이 바껴야함 그러려면 hook state가 필요함
+// ## [Use state 변수] 굉장히 중요
+// img 파일 public 폴더에 넣기 (json 파일에 경로에 돼있음)
