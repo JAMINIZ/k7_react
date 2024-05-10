@@ -1,5 +1,5 @@
 import MyDiv2 from "./MyDiv2"
-//1. useStagte import
+//1. useStagte import Hook을 쓸 때에는 {} 사용
 import { useState } from "react";
 
 export default function MyDiv() {

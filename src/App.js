@@ -1,9 +1,13 @@
+import './02/colock.png';
 import './App.css';
-// import MyClock from './02/MyClock';
+import MyClock from './02/MyClock';
 // import MyDiv from './03/MyDiv';
 import { IoHome } from "react-icons/io5";
-import MyList from './04/MyList';
-
+// import MyList from './04/MyList';
+// import Lotto from './05/Lotto';
+// import BoxOffice from './06/BoxOffice';
+// import MyClockTime from './02/MyClockTime';
+import FoodMain from './07/FoodMain';
 
 function App() {
   return (
@@ -18,10 +22,14 @@ function App() {
           <img src={cimg} className='App-logo' alt="logo"/>
         </div> */}
         {/* <MyDiv /> */}
-        <MyList />
+        {/* <MyList /> */}
+        {/* <Lotto /> */}
+        {/* <BoxOffice /> */}
+        {/* <MyClock/> */}
+        <FoodMain/>
       </main>
-      <footer className='flex justify-center items-center text-4xl font-bold text-white bg-slate-800 h-20'> 
-        footer
+      <footer className='flex justify-center items-center text-1xl font-bold text-white bg-slate-800 h-20'> 
+        ⓒ 2024 ParkJeongWoo. All right reserved.
       </footer>
     </div>
   );
@@ -41,5 +49,8 @@ export default App;
 // 전역 스타일 시트로 쓰면 각각의 컴포넌트에 스타일 시트를 넣어도 전체로 스타일시트가 다 적용 된다.
 // # probs 값 전달
 // 원하는 시점에 화면이 바껴야함 그러려면 hook state가 필요함
-// ## [Use state 변수] 굉장히 중요
+// 바뀌고 나면
+// ## [Use state 변수] 굉장히 중요 (함수이고 호출안해도 리액트가 제어함 컴포넌트 실행될 때 한 번만 실행됨)
 // img 파일 public 폴더에 넣기 (json 파일에 경로에 돼있음)
+// 함수형태가 된다는 것은 'react 기준' = function 함수명 ([입력]) {return([출력]);} 모든 프로그램들은 입력 -> 가공(프로그램) -> 출력
+// tag는 속성을 가질 수 있다 <함수명 속성=값 / >

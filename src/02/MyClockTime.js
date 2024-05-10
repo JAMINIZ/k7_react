@@ -1,12 +1,16 @@
 import './MyClock.css';
 import style from './My.module.css';
+import { useState, useEffect } from 'react';
 function MyClockTime () {
-   const now = new Date();
-   const nowStr = now.toLocaleTimeString();
-   const gubun = nowStr.substring(0, 2);
-   const st = {
-            color:"yellow", 
-            fontWeight : "bold"};
+const [ctime, setCtime] = useState(new Date( ));
+useEffect(()=>{
+    const tm = setInterval(()=>{
+        setCtime(new Date())
+    },1000)
+    return()=>{
+        clearInterval(tm);
+    }
+})
 //    let divStyle;
 //    if (gubun == "오전") divStyle = "div1";
 //    else divStyle = "div2";
@@ -22,7 +26,7 @@ function MyClockTime () {
         {/* <div className={gubun === "오전" ? "div1" : "div2"}> */}
         {/* <div style={{color:"yellow", fontWeight : "bold"}}> */}
         <div className={style.c1}>
-            {nowStr}
+           {ctime.toLocaleTimeString()} 
         </div>
         </>
     );
