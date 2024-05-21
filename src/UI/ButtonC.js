@@ -1,7 +1,7 @@
 
 export default function ButtonC({caption, bcolor, handleClick}) {
   const colorB = {
-    "blue" : "bg-blue-200",
+    "blue" : "bg-blue-500",
     "orange" : "bg-orange-600",
     "pink" : "bg-pink-400",
     "gray" : "bg-gray-950",
@@ -14,8 +14,8 @@ export default function ButtonC({caption, bcolor, handleClick}) {
     "gray" : "bg-gray-950"
   }
   return (
-    <button className={`inline-flex p-7 rounded-3xl
-                        justify-center items-center
+    <button className={`inline-flex p-2 rounded-md text-base
+                        justify-center items-center m-1
                         text-white font-bold
                         ${colorB[bcolor]}
                         ${colorBHover[bcolor]}`} onClick={handleClick}>

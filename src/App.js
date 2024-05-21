@@ -1,22 +1,33 @@
 import './02/colock.png';
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import RouteNav from './12/RouteNav';
 import MyClock from './02/MyClock';
+// import MyClockTime from './02/MyClockTime';
 // import MyDiv from './03/MyDiv';
 import { IoHome } from "react-icons/io5";
 // import MyList from './04/MyList';
-// import Lotto from './05/Lotto';
-// import BoxOffice from './06/BoxOffice';
-// import MyClockTime from './02/MyClockTime';
+import Lotto from './05/Lotto';
+import BoxOffice from './06/BoxOffice';
 import FoodMain from './07/FoodMain';
-
+// import TrafficMain from './08/TrafficMain';
+// import TrafficNav from './08_1/TrafficNav';
+import Traffic from './08_1/Traffic';
+// import MyRef from './09/MyRef';
+import Gallery from './10/Gallery';
+import Festival from './11/Festival';
+// import RouteMain from './12/RouteMain';
 function App() {
   return (
+    <BrowserRouter>
     <div className="flex flex-col w-full max-w-screen-xl mx-auto h-screen overscroll-y-auto">
       <header className='flex justify-between items-center text-xl font-bold h-20 p-10 bg-yellow-300'>
         <p>header</p>
+        <RouteNav/>
         <p>k-digital</p>
-        <p><IoHome className='text-3xl text-blue-950'/></p>
+        <p><IoHome className='text-3xl text-blue-950' /></p>
       </header>
+      
       <main className='grow flex justify-center items-center'>
         {/* <div className='flex justify-center items-center'>
           <img src={cimg} className='App-logo' alt="logo"/>
@@ -26,12 +37,30 @@ function App() {
         {/* <Lotto /> */}
         {/* <BoxOffice /> */}
         {/* <MyClock/> */}
-        <FoodMain/>
+        {/* <FoodMain/> */}
+        {/* <TrafficMain/> */}
+        {/* <TrafficNav/> */}
+        {/* <Traffic/> */}
+        {/* <MyRef/> */}
+        {/* <Gallery/> */}
+        {/* <Festival/> */}
+        {/* <RouteMain/> */}        
+          <Routes>
+            <Route path="/clock" element={<MyClock />} />
+            <Route path="/lotto" element={<Lotto />} />
+            <Route path="/boxoffice" element={<BoxOffice />} />
+            <Route path="/foodmain" element={<FoodMain />} />
+            <Route path="/traffic" element={<Traffic />} />
+            <Route path="/Gallery" element={<Gallery />} />
+            <Route path="/Festival" element={<Festival />} />
+          </Routes>
       </main>
-      <footer className='flex justify-center items-center text-1xl font-bold text-white bg-slate-800 h-20'> 
+      
+      <footer className='flex justify-center items-center text-1xl font-bold text-white bg-slate-800 h-20'>
         ⓒ 2024 ParkJeongWoo. All right reserved.
       </footer>
     </div>
+    </BrowserRouter>
   );
 }
 

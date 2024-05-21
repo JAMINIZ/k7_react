@@ -18,8 +18,9 @@ export default function BoxOfiiceTbody({ dailyList, setSelMv }) {
             <td className="whitespace-nowrap px-6 py-2 text-center">{parseInt(item.salesAcc).toLocaleString("ko-KR")}원</td>
             <td className="whitespace-nowrap px-6 py-2 text-center">{item.audiAcc.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}명</td>
             <td className="whitespace-nowrap px-2 py-2 flex justify-center text-center">
-                <span>{(item.rankInten) > 0 ? <GoTriangleUp className="text-red-600"/> : (item.rankInten) < 0 ? <GoTriangleDown className="text-blue-600"/> : "-"}</span>
-                <span>
+                <span>{(item.rankInten) > 0 ? <GoTriangleUp className="text-red-600"/> : 
+                                            (item.rankInten) < 0 ? <GoTriangleDown className="text-blue-600"/> : "-"}</span>
+                <span className="font-bold">
                     {Math.abs(item.rankInten)}
                 </span>
                 </td>
