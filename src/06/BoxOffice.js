@@ -32,7 +32,7 @@ export default function BoxOffice() {
         // console.log(e.target.value); // ref 변수 사용하지 않을 때
 
         // http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20120101
-        let url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?`
+        let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?`
         url = url + `key=${process.env.REACT_APP_MV_KEY}`;
         url = url + `&targetDt=${selDate.current.value.replaceAll('-', '')}`;
         getFetchData(url)
